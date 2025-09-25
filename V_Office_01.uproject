@@ -178,7 +178,7 @@
 		},
 		{
 			"Name": "OneClickMaterials",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher: //ue/marketplace/product/a2aba59069af445081f7e628a415e70b"
 		},
 		{
@@ -187,12 +187,12 @@
 		},
 		{
 			"Name": "DLSS",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
 		},
 		{
 			"Name": "NIS",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
 		},
 		{
@@ -202,7 +202,7 @@
 		},
 		{
 			"Name": "StreamlineDeepDVC",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
 		},
 		{
@@ -217,12 +217,12 @@
 		},
 		{
 			"Name": "StreamlineDLSSG",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
 		},
 		{
 			"Name": "StreamlineReflex",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "https://www.unrealengine.com/marketplace/en-US/product/nvidia-dlss"
 		}
 	]
