@@ -242,6 +242,10 @@
 				"Linux",
 				"Mac"
 			]
+		},
+		{
+			"Name": "OptiXDenoise",
+			"Enabled": true
 		}
 	]
 }
