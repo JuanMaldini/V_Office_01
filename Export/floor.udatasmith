@@ -1,0 +1,1069 @@
+<DatasmithUnrealScene>
+	<Version>0.24</Version>
+	<SDKVersion>5.6.0-43139311</SDKVersion>
+	<Host>Autodesk 3dsmax 24.0.923Corona 8 (Hotfix 1)</Host>
+	<Application Vendor="Autodesk" ProductName="3dsmax" ProductVersion="24.0.923"/>
+	<ResourcePath>C:/Users/Tatooine/Documents/GitHub/V_Office_01/Export</ResourcePath>
+	<User ID="3faf11294a0ba1f083af988ecb80e30e" OS="Windows 8"/>
+	<Geolocation/>
+	<StaticMesh name="70852" label="CHIC_REVIVALS">
+		<file path="floor_Assets/70852.udsmesh"/>
+		<Size a="14914394.0" x="2632.387695" y="4418.749512" z="10.0"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="047df888c329376bc1037a15b459297e"/>
+		<Material id="1" name="Material__45"/>
+		<Material id="2" name="Material__57"/>
+		<Material id="3" name="Material__58"/>
+		<Material id="4" name="Material__59"/>
+		<Material id="5" name="Material__60"/>
+		<Material id="6" name="Material__61"/>
+		<Material id="7" name="Material__63"/>
+		<Material id="8" name="Material__62"/>
+		<Material id="9" name="Material__64"/>
+		<Material id="10" name="Material__65"/>
+		<Material id="11" name="Material__67"/>
+		<Material id="12" name="Material__66"/>
+	</StaticMesh>
+	<StaticMesh name="70853" label="Parket">
+		<file path="floor_Assets/70853.udsmesh"/>
+		<Size a="9722195.0" x="2478.975342" y="4600.970215" z="10.0"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d2a57bcc8cef6764acc07c3c052501c2"/>
+		<Material id="1" name="Flooring_Standard_Grey"/>
+	</StaticMesh>
+	<StaticMesh name="70855" label="RENEWED_THREAD_VIBE">
+		<file path="floor_Assets/70855.udsmesh"/>
+		<Size a="14914394.0" x="2632.387695" y="4418.749512" z="10.0"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="632b9a49e54af94a9569d84a123856cc"/>
+		<Material id="1" name="Material__68"/>
+		<Material id="2" name="Material__70"/>
+		<Material id="3" name="Material__78"/>
+		<Material id="4" name="Material__77"/>
+		<Material id="5" name="Material__71"/>
+		<Material id="6" name="Material__72"/>
+		<Material id="7" name="Material__80"/>
+		<Material id="8" name="Material__79"/>
+		<Material id="9" name="Material__75"/>
+		<Material id="10" name="Material__73"/>
+		<Material id="11" name="Material__76"/>
+		<Material id="12" name="Material__74"/>
+	</StaticMesh>
+	<StaticMesh name="70856" label="NORMAL">
+		<file path="floor_Assets/70856.udsmesh"/>
+		<Size a="12396819.0" x="2632.387695" y="4418.749512" z="10.0"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="12027489c56e905303a2dca346ada792"/>
+		<Material id="1" name="Material__68"/>
+	</StaticMesh>
+	<ActorMesh name="70852" label="CHIC_REVIVALS" layer="0" mobility="Static">
+		<mesh name="70852"/>
+		<Transform tx="-135.222602" ty="-413.894355" tz="-2.299095" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.707107" qw="0.707107" qhex64="00000000000000000000000000000000BF3B7F869EA0E63FAD3B7F469EA0E63F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_mesh" />
+		<tag value="Max.handle: 70852" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<ActorMesh name="70853" label="Parket" layer="0" mobility="Static">
+		<mesh name="70853"/>
+		<Transform tx="-226.333251" ty="-337.188262" tz="2.700955" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.707107" qw="0.707107" qhex64="00000000000000000000000000000000BF3B7F869EA0E63FAD3B7F469EA0E63F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_mesh" />
+		<tag value="Max.handle: 70853" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<ActorMesh name="70855" label="RENEWED_THREAD_VIBE" layer="0" mobility="Static">
+		<mesh name="70855"/>
+		<Transform tx="-135.222602" ty="-413.894355" tz="-2.299095" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.707107" qw="0.707107" qhex64="00000000000000000000000000000000BF3B7F869EA0E63FAD3B7F469EA0E63F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_mesh" />
+		<tag value="Max.handle: 70855" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<ActorMesh name="70856" label="NORMAL" layer="0" mobility="Static">
+		<mesh name="70856"/>
+		<Transform tx="-135.222602" ty="-413.894355" tz="-2.299095" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.707107" qw="0.707107" qhex64="00000000000000000000000000000000BF3B7F869EA0E63FAD3B7F469EA0E63F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_mesh" />
+		<tag value="Max.handle: 70856" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<Texture name="CHIC_REVIVALS_35615_01_2_2_Tex" label="CHIC_REVIVALS_35615_01_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_01.jpg">
+		<Hash value="bd9025d9863cee22d053e881378ab3a8"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_01_normal_2_2_Tex" label="CHIC_REVIVALS_35615_01_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_01_normal.png">
+		<Hash value="b0da25de18b536ae22f528c1f43a7c96"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_02_2_2_Tex" label="CHIC_REVIVALS_35615_02_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_02.jpg">
+		<Hash value="ae9b20708852c68fe50f676dfd5a760f"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_02_normal_2_2_Tex" label="CHIC_REVIVALS_35615_02_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_02_normal.png">
+		<Hash value="b55b93b372d73fbe95a880654132b057"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_03_2_2_Tex" label="CHIC_REVIVALS_35615_03_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_03.jpg">
+		<Hash value="9571042847d75bcf2c5c8d3b0cbeb2dc"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_03_normal_2_2_Tex" label="CHIC_REVIVALS_35615_03_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_03_normal.png">
+		<Hash value="f2698211602b8d9b18b9afe0591b4b93"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_04_2_2_Tex" label="CHIC_REVIVALS_35615_04_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_04.jpg">
+		<Hash value="c2e4fa2d48c861672e0c6b45eeb868c8"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_04_normal_2_2_Tex" label="CHIC_REVIVALS_35615_04_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_04_normal.png">
+		<Hash value="290a4b5c823f2ac3aa6e3c385832e009"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_05_2_2_Tex" label="CHIC_REVIVALS_35615_05_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_05.jpg">
+		<Hash value="da7350e23a1f406177d7d7ebb09593b6"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_05_normal_2_2_Tex" label="CHIC_REVIVALS_35615_05_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_05_normal.png">
+		<Hash value="5c76de741a5165a05f653d13dc2e0d38"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_06_2_2_Tex" label="CHIC_REVIVALS_35615_06_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_06.jpg">
+		<Hash value="3744d676a73dc831528fb979a4336f1f"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_06_normal_2_2_Tex" label="CHIC_REVIVALS_35615_06_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_06_normal.png">
+		<Hash value="debea8092480f7f5346a76a8ac36576e"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_07_2_2_Tex" label="CHIC_REVIVALS_35615_07_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_07.jpg">
+		<Hash value="c1150ccab1339c813581c6c9ed6affbc"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_07_normal_2_2_Tex" label="CHIC_REVIVALS_35615_07_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_07_normal.png">
+		<Hash value="7496abef39930efc14e8444f3380152e"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_08_2_2_Tex" label="CHIC_REVIVALS_35615_08_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_08.jpg">
+		<Hash value="8f7d810c647f581cfce949736b3dc8dc"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_08_normal_2_2_Tex" label="CHIC_REVIVALS_35615_08_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_08_normal.png">
+		<Hash value="e4636b1812973bb259d89de4cef54d9e"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_09_2_2_Tex" label="CHIC_REVIVALS_35615_09_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_09.jpg">
+		<Hash value="0533c3b7c7c9e9302a1f845dee1b370d"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_09_normal_2_2_Tex" label="CHIC_REVIVALS_35615_09_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_09_normal.png">
+		<Hash value="5cbf3598960500aabab7039b74853096"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_10_2_2_Tex" label="CHIC_REVIVALS_35615_10_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_10.jpg">
+		<Hash value="e837a9ad877a4f0feb8c064aeefec2df"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_10_normal_2_2_Tex" label="CHIC_REVIVALS_35615_10_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_10_normal.png">
+		<Hash value="a0b99a6e9b88c84ee5df1a8c258a3702"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_11_2_2_Tex" label="CHIC_REVIVALS_35615_11_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_11.jpg">
+		<Hash value="d267dad6c27d7eff016c822597b70130"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_11_normal_2_2_Tex" label="CHIC_REVIVALS_35615_11_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_11_normal.png">
+		<Hash value="db434f1f2df3773493f6bb335a5e515e"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_12_2_2_Tex" label="CHIC_REVIVALS_35615_12_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/CHIC_REVIVALS_35615_12.jpg">
+		<Hash value="bd45718d6b3f2f1daa5e4b98f3dcf3a3"/>
+	</Texture>
+	<Texture name="CHIC_REVIVALS_35615_12_normal_2_2_Tex" label="CHIC_REVIVALS_35615_12_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/CHIC_REVIVALS_35615_12_normal.png">
+		<Hash value="98c30ec73350fcc2530125fe20142410"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_01_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_01_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_01.jpg">
+		<Hash value="fdd1d91d23272f99768af3e7fb21c8b0"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_01_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_01_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_01_normal.png">
+		<Hash value="a2bd1a11cc8855be88b1f5913236a857"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_02_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_02_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_02.jpg">
+		<Hash value="9a380525ac0df3113b545d245fd322dc"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_02_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_02_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_02_normal.png">
+		<Hash value="2c6f6fdaf50f2d48c75367992d026822"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_03_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_03_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_03.jpg">
+		<Hash value="7480da6324e486d3702ee8cf9d655689"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_03_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_03_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_03_normal.png">
+		<Hash value="b4306faaaf3b5ae7f08384f0e729c686"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_04_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_04_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_04.jpg">
+		<Hash value="3876cb04f79169efd909b7ab61ab6ec3"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_04_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_04_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_04_normal.png">
+		<Hash value="9a2395218d12ba323cc8dcd44f0c0a33"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_05_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_05_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_05.jpg">
+		<Hash value="a9454d8826b55a9f750e61058846e799"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_05_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_05_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_05_normal.png">
+		<Hash value="2e78fa3bbff621ab9c74e47d568dd0fa"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_06_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_06_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_06.jpg">
+		<Hash value="6c33859db9e912a6d05911e965c9b1d6"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_06_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_06_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_06_normal.png">
+		<Hash value="15099684cc3dbe367f3c449e3998c2da"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_07_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_07_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_07.jpg">
+		<Hash value="f267717b2203abf4563b54d38fb647d3"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_07_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_07_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_07_normal.png">
+		<Hash value="e2f8f311450fb2b80b8814c2e9ca9f5a"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_08_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_08_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_08.jpg">
+		<Hash value="ddae720b4a8312e9c5eba4bb72cb9040"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_08_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_08_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_08_normal.png">
+		<Hash value="92f6a1a12e205bdb558c09dda35567aa"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_09_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_09_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_09.jpg">
+		<Hash value="75ac75c3ef3ae806d875cd14e43320e5"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_09_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_09_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_09_normal.png">
+		<Hash value="50a429b31fd8d9a79243e52cc27f6d1b"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_10_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_10_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_10.jpg">
+		<Hash value="2b19aa3fba2c80ea5c348620f5117ead"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_10_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_10_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_10_normal.png">
+		<Hash value="b288f72b4e5fa09475f6525523df0a33"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_11_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_11_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_11.jpg">
+		<Hash value="2d8b074d64aa15761bd2f74599321839"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_11_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_11_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_11_normal.png">
+		<Hash value="4ceb536a827773ff143726d3b0e4d68f"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_12_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_12_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="floor_Assets/RENEWED_THREAD_VIBE_11610_12.jpg">
+		<Hash value="96c99e6f2b9cbe4ff19539ab2ae2b998"/>
+	</Texture>
+	<Texture name="RENEWED_THREAD_VIBE_11610_12_normal_2_2_Tex" label="RENEWED_THREAD_VIBE_11610_12_normal_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="floor_Assets/RENEWED_THREAD_VIBE_11610_12_normal.png">
+		<Hash value="5a727c425713eaf35962762cf83572ae"/>
+	</Texture>
+	<UEPbrMaterial name="Material__45">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_01_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_01_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__57">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_02_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_02_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__58">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_03_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_03_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__59">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_04_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_04_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__60">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_05_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_05_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__61">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_06_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_06_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__63">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_07_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_07_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__62">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_08_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_08_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__64">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_09_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_09_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__65">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_10_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_10_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__67">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_11_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_11_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__66">
+		<Expressions>
+			<Texture Name="" PathName="CHIC_REVIVALS_35615_12_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="CHIC_REVIVALS_35615_12_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Flooring_Standard_Grey">
+		<Expressions>
+			<Color Name="Diffuse_Color" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Color Name="Emissive_Color" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Scalar Name="Metallic" constant="0.0"/>
+			<Scalar Name="" constant="0.75"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="0" OutputIndex="0"/>
+		<Input Name="Metallic" expression="2" OutputIndex="0"/>
+		<Input Name="Roughness" expression="3" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="1" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__68">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_01_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_01_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__70">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_02_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_02_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__78">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_03_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_03_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__77">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_04_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_04_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__71">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_05_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_05_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__72">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_06_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_06_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__80">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_07_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_07_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__79">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_08_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_08_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__75">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_09_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_09_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__73">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_10_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_10_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__76">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_11_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_11_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__74">
+		<Expressions>
+			<Texture Name="" PathName="RENEWED_THREAD_VIBE_11610_12_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.75"/>
+			<Scalar Name="" constant="0.5"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="RENEWED_THREAD_VIBE_11610_12_normal_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="2" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="6" OutputIndex="0"/>
+		<Input Name="Specular" expression="7" OutputIndex="0"/>
+		<Input Name="Normal" expression="9" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<MetaData name="70852" reference="Actor.70852">
+		<KeyValueProperty name="MapChannel:1" type="String" val="UVmap_0"/>
+		<KeyValueProperty name="MapChannel:2" type="String" val="LightMapUV"/>
+	</MetaData>
+	<MetaData name="70853" reference="Actor.70853">
+		<KeyValueProperty name="MapChannel:1" type="String" val="UVmap_0"/>
+		<KeyValueProperty name="MapChannel:2" type="String" val="LightMapUV"/>
+	</MetaData>
+	<MetaData name="70855" reference="Actor.70855">
+		<KeyValueProperty name="MapChannel:1" type="String" val="UVmap_0"/>
+		<KeyValueProperty name="MapChannel:2" type="String" val="LightMapUV"/>
+	</MetaData>
+	<MetaData name="70856" reference="Actor.70856">
+		<KeyValueProperty name="MapChannel:1" type="String" val="UVmap_0"/>
+		<KeyValueProperty name="MapChannel:2" type="String" val="LightMapUV"/>
+	</MetaData>
+	<Export Duration="0"/>
+</DatasmithUnrealScene>
