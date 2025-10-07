@@ -227,12 +227,12 @@
 		},
 		{
 			"Name": "ProjectCleaner",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/4d7f5dc837fc4b009bb91e678adf9fd0"
 		},
 		{
 			"Name": "ActorPalette",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "Avalanche",
@@ -245,7 +245,7 @@
 		},
 		{
 			"Name": "OptiXDenoise",
-			"Enabled": true
+			"Enabled": false
 		}
 	]
 }
