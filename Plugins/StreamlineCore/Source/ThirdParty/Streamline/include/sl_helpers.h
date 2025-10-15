@@ -385,6 +385,11 @@ inline DLSSPreset resolveDLSSPreset(DLSSPreset preset)
 {
     switch (preset)
     {
+        case DLSSPreset::ePresetA:
+        case DLSSPreset::ePresetB:
+        case DLSSPreset::ePresetC:
+        case DLSSPreset::ePresetD:
+        case DLSSPreset::ePresetE:
         case DLSSPreset::ePresetF:
         case DLSSPreset::ePresetJ:
         case DLSSPreset::ePresetK:

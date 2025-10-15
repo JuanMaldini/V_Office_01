@@ -24,6 +24,12 @@
 
 #include "sl_dlss.h"
 
+#if __cplusplus >= 201402L
+#define RR_DEPRECATED_PRESET [[deprecated("Presets A-C are deprecated. Use defaults or preset D or E")]]
+#else
+#define RR_DEPRECATED_PRESET
+#endif
+
 namespace sl
 {
 
@@ -31,21 +37,21 @@ enum class DLSSDPreset : uint32_t
 {
     //! Default behavior, may or may not change after an OTA
     eDefault,
-                    // ePresetA removed, use preset D or E
-                    // ePresetB removed, use preset D or E
-                    // ePresetC removed, use preset D or E
-    ePresetD = 4,   // Default model (transformer)
-    ePresetE = 5,   // Latest transformer model (must use if DoF guide is needed)
-    ePresetF = 6,   // Reverts to default
-    ePresetG = 7,   // Reverts to default
-    ePresetH = 8,   // Reverts to default
-    ePresetI = 9,   // Reverts to default
-    ePresetJ = 10,  // Reverts to default
-    ePresetK = 11,  // Reverts to default
-    ePresetL = 12,  // Reverts to default
-    ePresetM = 13,  // Reverts to default. Not recommended to use
-    ePresetN = 14,  // Reverts to default. Not recommended to use
-    ePresetO = 15,  // Reverts to default. Not recommended to use
+    ePresetA    RR_DEPRECATED_PRESET,   // Deprecated, use preset D or E
+    ePresetB    RR_DEPRECATED_PRESET,   // Deprecated, use preset D or E
+    ePresetC    RR_DEPRECATED_PRESET,   // Deprecated, use preset D or E
+    ePresetD,   // Default model (transformer)
+    ePresetE,   // Latest transformer model (must use if DoF guide is needed)
+    ePresetF,   // Reverts to default
+    ePresetG,   // Reverts to default
+    ePresetH,   // Reverts to default
+    ePresetI,   // Reverts to default
+    ePresetJ,   // Reverts to default
+    ePresetK,   // Reverts to default
+    ePresetL,   // Reverts to default
+    ePresetM,   // Reverts to default. Not recommended to use
+    ePresetN,   // Reverts to default. Not recommended to use
+    ePresetO,   // Reverts to default. Not recommended to use
 
     eCount
 };

@@ -36,7 +36,6 @@ using namespace UE::VirtualProduction;
 UENUM()
 enum class EDLSSUpscalerModularFeatureQuality : uint8
 {
-	Auto             UMETA(DisplayName = "Auto", ToolTip = "Use Auto to select best quality setting for a given resolution"),
 	UltraQuality     UMETA(DisplayName = "Ultra Quality"),
 	Quality          UMETA(DisplayName = "Quality"),
 	Balanced         UMETA(DisplayName = "Balanced"),
@@ -56,7 +55,7 @@ struct DLSS_API FDLSSUpscalerModularFeatureSettings
 
 	/** DLSS quality. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DLSS", meta = (DisplayName = "Quality"))
-	EDLSSUpscalerModularFeatureQuality Quality = EDLSSUpscalerModularFeatureQuality::Auto;
+	EDLSSUpscalerModularFeatureQuality Quality = EDLSSUpscalerModularFeatureQuality::Quality;
 };
 
 
@@ -114,7 +113,7 @@ public:
 	const FInstancedPropertyBag* GetCustomSettings_RenderThread(const FSceneView& View) const;
 
 	/** return quality mode from custom settings. */
-	static TOptional<EDLSSQualityMode> GetQualityMode(const FInstancedPropertyBag& InSettings, int32 PixelCount);
+	static TOptional<EDLSSQualityMode> GetQualityMode(const FInstancedPropertyBag& InSettings);
 
 private:
 	// Array of Functors that can be used to activate an extension for the current frame and given context.

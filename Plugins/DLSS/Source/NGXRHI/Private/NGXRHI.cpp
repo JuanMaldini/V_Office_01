@@ -127,39 +127,33 @@ NGXDLSSFeature::~NGXDLSSFeature()
 
 void NVSDK_CONV NGXLogSink(const char* InNGXMessage, NVSDK_NGX_Logging_Level InLoggingLevel, NVSDK_NGX_Feature InSourceComponent)
 {
-#if !NO_LOGGING
 	FString Message(FString(UTF8_TO_TCHAR(InNGXMessage)).TrimEnd());
-	FString NGXComponent = FString::Printf(TEXT("Unknown(%d)"),InSourceComponent) ;
+	const TCHAR* NGXComponent = TEXT("Unknown");
 	
 	switch (InSourceComponent)
 	{
-		case NVSDK_NGX_Feature_SuperSampling    : NGXComponent = TEXT("DLSS-SR"); break;
-		case NVSDK_NGX_Feature_RayReconstruction: NGXComponent = TEXT("DLSS-RR"); break;
-		case NVSDK_NGX_Feature_FrameGeneration:   NGXComponent = TEXT("DLSS-FG"); break;
-		case NVSDK_NGX_Feature_DeepDVC:           NGXComponent = TEXT("DeepDVC"); break;
-		case NVSDK_NGX_Feature_Reserved_SDK     : NGXComponent = TEXT("SDK"); break;
-		case NVSDK_NGX_Feature_Reserved_Core    : NGXComponent = TEXT("Core"); break;
+		case NVSDK_NGX_Feature_SuperSampling: NGXComponent = TEXT("DLSS");	break;
+		case NVSDK_NGX_Feature_Reserved_SDK : NGXComponent = TEXT("SDK");	break;
+		case NVSDK_NGX_Feature_Reserved_Core: NGXComponent = TEXT("Core");	break;
 	}
 
-	const bool bIsOurNGXBinary = Message.Contains(TEXT("nvngx_dlss.dll")) || Message.Contains(TEXT("nvngx_dlssd.dll"));
 	const bool bIsVerboseStartupMessage =
-		// we want to know if the DLSS SR/RR binaries are missing
-		(Message.Contains(TEXT("doesn't exist in any of the search paths")) && !bIsOurNGXBinary)
-		|| Message.Contains(TEXT("warning: UWP compliant mode enabled"))
-		|| Message.Contains(TEXT("error: failed to load NGXCore"))
-		;
+		(Message.Contains(TEXT(" doesn't exist in any of the search paths")) && !Message.Contains(TEXT("nvngx_dlss.dll"))) || // we want to know if the DLSS binary is missing
+		Message.Contains(TEXT("warning: UWP compliant mode enabled"));
+
 	
+
 	if ((CVarNGXRenameLogSeverities.GetValueOnAnyThread() == 2) || ((CVarNGXRenameLogSeverities.GetValueOnAnyThread() == 1) && bIsVerboseStartupMessage))
 	{
 		Message = Message.Replace(TEXT("error:"), TEXT("e_rror:"));
 		Message = Message.Replace(TEXT("Warning:"), TEXT("w_arning:"));
-		UE_LOG(LogDLSSNGX, Verbose, TEXT("[%s]: %s"), *NGXComponent, *Message);
+		UE_LOG(LogDLSSNGX, Verbose, TEXT("[%s]: %s"), NGXComponent, *Message);
 	}
 	else
 	{
-		UE_LOG(LogDLSSNGX, Log, TEXT("[%s]: %s"), *NGXComponent, *Message);
+		UE_LOG(LogDLSSNGX, Log, TEXT("[%s]: %s"), NGXComponent, *Message);
 	}
-#endif
+
 }
 
 
@@ -486,8 +480,6 @@ FDLSSOptimalSettings NGXRHI::FDLSSQueryFeature::GetDLSSOptimalSettings(const FDL
 
 	FDLSSOptimalSettings OptimalSettings;
 
-	float SharpnessIsDeprecatedButWeStillNeedAFunctionArgument;
-
 	const NVSDK_NGX_Result ResultGetOptimalSettings = NGX_DLSS_GET_OPTIMAL_SETTINGS(
 		CapabilityParameters,
 		InResolution.Width,
@@ -499,7 +491,7 @@ FDLSSOptimalSettings NGXRHI::FDLSSQueryFeature::GetDLSSOptimalSettings(const FDL
 		reinterpret_cast<unsigned int*>(&OptimalSettings.RenderSizeMax.Y),
 		reinterpret_cast<unsigned int*>(&OptimalSettings.RenderSizeMin.X),
 		reinterpret_cast<unsigned int*>(&OptimalSettings.RenderSizeMin.Y),
-		&SharpnessIsDeprecatedButWeStillNeedAFunctionArgument
+		&OptimalSettings.Sharpness
 		);
 	UE_LOG(LogDLSSNGXRHI, Log, TEXT("NGX_DLSS_GET_OPTIMAL_SETTINGS -> (%u %s)"), ResultGetOptimalSettings, GetNGXResultAsString(ResultGetOptimalSettings));
 	checkf(NVSDK_NGX_SUCCEED(ResultGetOptimalSettings), TEXT("failed to query supported DLSS modes"));
@@ -559,6 +551,7 @@ uint32 FRHIDLSSArguments::GetNGXCommonDLSSFeatureFlags() const
 	if (DenoiserMode == ENGXDLSSDenoiserMode::Off)
 		DLSSFeatureFlags |= bool(ERHIZBuffer::IsInverted) ? NVSDK_NGX_DLSS_Feature_Flags_DepthInverted : 0;
 	DLSSFeatureFlags |= !bHighResolutionMotionVectors ? NVSDK_NGX_DLSS_Feature_Flags_MVLowRes : 0;
+	DLSSFeatureFlags |= Sharpness != 0.0f ? NVSDK_NGX_DLSS_Feature_Flags_DoSharpening : 0;
 	DLSSFeatureFlags |= bUseAutoExposure ? NVSDK_NGX_DLSS_Feature_Flags_AutoExposure : 0;
 	DLSSFeatureFlags |= bEnableAlphaUpscaling ? NVSDK_NGX_DLSS_Feature_Flags_AlphaUpscaling : 0;
 	return DLSSFeatureFlags;

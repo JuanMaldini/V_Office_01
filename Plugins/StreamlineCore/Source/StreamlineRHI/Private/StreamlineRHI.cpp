@@ -30,10 +30,6 @@
 #include "Misc/Paths.h"
 #include "Modules/ModuleManager.h"
 
-
-#include "Internationalization/Regex.h"
-#include "Templates/Function.h"
-
 #include "sl_deepdvc.h"
 #include "sl_dlss_g.h"
 #include "sl.h"
@@ -60,138 +56,41 @@ DEFINE_LOG_CATEGORY_STATIC(LogStreamlineAPI, Log, All);
 
 #define LOCTEXT_NAMESPACE "StreamlineRHI"
 
-/*UE log verbosity can be adjusted in non-shipping builds in various ways as described in 
-https://dev.epicgames.com/community/snippets/3GoB/unreal-engine-how-to-set-log-verbosity-via-command-line-with-logcmds?locale=en-en
-
-using -LogCmds:
--LogCmds="LogStreamlineAPI VeryVerbose, LogStreamlineRHI Verbose" 
-with CVar syntax:
--ini:Engine:[Core.Log]:LogStreamlineAPI=VeryVerbose
-Using a config file:
-e.g. in BaseEngine/DefaultEngine.ini
-
-[Core.Log] 
-; This can be used to change the default log level for engine logs to help with debugging
-LogStreamlineAPI=VeryVerbose
-LogStreamlineRHI=Verbose
-
-*/
-
 static void StreamlineLogSink(sl::LogType InSLVerbosity, const char* InSLMessage)
 {
 #if !NO_LOGGING
 	FString Message(FString(UTF8_TO_TCHAR(InSLMessage)).TrimEnd());
 
 	static_assert(uint32_t(sl::LogType::eCount)  == 3U, "sl::LogType enum value mismatch. Dear NVIDIA Streamline plugin developer, please update this code!" ) ;
-	static_assert(uint32_t(ELogVerbosity::Type::NumVerbosity) == 8U, "(ELogVerbosity::Type enum value mismatch. Dear NVIDIA Streamline plugin developer, please update this code!");
 
-	ELogVerbosity::Type UEVerbosity;
+	if (Message.Contains(TEXT("[operator ()] 'kFeatureDLSS_G' is missing")))
+	{
+		// nuisance message that appears periodically when the FG feature isn't loaded
+		return;
+	}
+	// TODO REMOVE
+	if (Message.Contains(TEXT("[streamline][error]commoninterface.h")) && Message.Contains(TEXT("same frame is NOT allowed!")))
+	{
+		InSLVerbosity = sl::LogType::eWarn;
+	}
+
+	// downgrading warning causing automation tests to fail
+	if (Message.Contains(TEXT("A redundant call or a race condition")))
+	{
+		InSLVerbosity = sl::LogType::eInfo;
+	}
 
 	switch (InSLVerbosity)
 	{
-	default:
-	case sl::LogType::eInfo:
-		UEVerbosity = ELogVerbosity::Log;
-		break;
-	case sl::LogType::eWarn:
-		UEVerbosity = ELogVerbosity::Warning;
-		break;
-	case sl::LogType::eError:
-		UEVerbosity = ELogVerbosity::Error;
-		break;
-	}
-
-	// the SL log messages have their SL SDK file & function name embedded but we are not matching those to insulate us from any shuffling around on the SDK side
-	// e.g. for [15-20-52][streamline][warn][tid:26560][0s:582ms:945us]commonEntry.cpp:814[getNGXFeatureRequirements] ngxResult not implemented
-	// we only filter for "ngxResult not implemented"
-
-	auto MatchesAnyFilter = [](const FString& Message, const TArray<const TCHAR*>& Filters) -> bool
-	{
-		for (const TCHAR* Filter : Filters)
-		{
-			if (FRegexMatcher(FRegexPattern(Filter), Message).FindNext())
-			{
-				return true;
-			}
-		}
-		return false;
-	};
-
-	// SL thinks those are "warnings" but we think they are "info"/Log
-	const TArray<const TCHAR*> LogFilters = 
-	{
-		// SL reports this as sl::LogType::eWarn but we are downgrading here to log so automation testing doesn't fail
-		// That is expected to only happen once during startup
-		TEXT("Repeated slDLSSGSetOptions() call for the frame (\\d+). A redundant call or a race condition with Present()"),
-	};
-
-	// Those
-	const TArray<const TCHAR*> VerboseFilters = 
-	{
-		TEXT("ngxResult not implemented")
-		, TEXT("Keyboard manager disabled in production")
-		, TEXT("Frame rate over (\\d+), reseting frame timer") // no need to brag
-		, TEXT("Couldn't lock the mutex on sync present - will skip the present.")
-		, TEXT("FC feedback: (\\d+)")
-		, TEXT(" Achieved (.*) FC feedback state")
-		, TEXT("Invalid no warp resource extent, IF optionally specified by the client!Either extent not provided or one of the extent dimensions(0 x 0) is incorrectly zero.Resetting extent to full no warp resource size(0 x 0)")
-	};
-
-	const TArray<const TCHAR*> VeryVerboseFilters = 
-	{
-		// This is just spam
-		TEXT("error: failed to load NGXCore")
-		 
-		// We are not using DLSS-SR/RR in Streamline so we have no need for those
-		, TEXT("DLSSD feature is not supported.Please check if you have a valid nvngx_dlssd.dll or your driver is supporting DLSSD.")
-		, TEXT("Ignoring plugin 'sl.dlss_d' since it is was not requested by the host")
-		, TEXT("Feature 'kFeatureDLSS' is not sharing required data")
-
-		// With SL 2.8, SL 2.9 and DLSS-FG off we get this EVERY frame when we are not using the legacy slSetTag plugin setting.
-		, TEXT("SL resource tags for frame (\\d+) not set yet!")
-	};
-
-	if (MatchesAnyFilter(Message, LogFilters))
-	{
-		UEVerbosity = ELogVerbosity::Log;
-	}
-	else if (MatchesAnyFilter(Message, VerboseFilters))
-	{
-		UEVerbosity = ELogVerbosity::Verbose;
-	}
-	else if (MatchesAnyFilter(Message, VeryVerboseFilters))
-	{
-		UEVerbosity = ELogVerbosity::VeryVerbose;
-	}
-
-	//Switch it up since UE_LOG needs the verbosity as a compile time constant
-	switch (UEVerbosity)
-	{
-		case ELogVerbosity::Fatal:
-			UE_LOG(LogStreamlineAPI, Fatal, TEXT("%s"), *Message);
+		default:
+		case sl::LogType::eInfo:
+			UE_LOG(LogStreamlineAPI, Log, TEXT("[Info]: %s"), *Message);
 			break;
-
-		case ELogVerbosity::Error:
-			UE_LOG(LogStreamlineAPI, Error, TEXT("%s"), *Message);
+		case sl::LogType::eWarn:
+			UE_LOG(LogStreamlineAPI, Warning, TEXT("[Warn]: %s"), *Message);
 			break;
-		case ELogVerbosity::Warning:
-			UE_LOG(LogStreamlineAPI, Warning, TEXT("%s"), *Message);
-			break;
-
-		case ELogVerbosity::Display:
-			UE_LOG(LogStreamlineAPI, Display, TEXT("%s"), *Message);
-			break;
-
-		default: /* fall through*/
-		case ELogVerbosity::Log:
-			UE_LOG(LogStreamlineAPI, Log, TEXT("%s"), *Message);
-			break;
-		
-		case ELogVerbosity::Verbose:
-			UE_LOG(LogStreamlineAPI, Verbose, TEXT("%s"), *Message);
-			break;
-		case ELogVerbosity::VeryVerbose:
-			UE_LOG(LogStreamlineAPI, VeryVerbose, TEXT("%s"), *Message);
+		case sl::LogType::eError:
+			UE_LOG(LogStreamlineAPI, Error, TEXT("[Error]: %s"),*Message);
 			break;
 	}
 #endif

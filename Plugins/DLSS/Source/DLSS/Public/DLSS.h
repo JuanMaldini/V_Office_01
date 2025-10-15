@@ -16,7 +16,6 @@
 class FDLSSUpscaler;
 class FDLSSDenoiser;
 class ISceneViewExtension;
-class IScreenSpaceDenoiser;
 class FDLSSUpscalerViewExtension;
 class FNGXAutomationViewExtension;
 class NGXRHI;
@@ -51,7 +50,6 @@ class IDLSSModuleInterface : public IModuleInterface
 		virtual void GetDLSSRRMinDriverVersion(int32& MajorVersion, int32& MinorVersion) const = 0;
 		virtual float GetResolutionFractionForQuality(int32 Quality) const = 0;
 		virtual FDLSSUpscaler* GetDLSSUpscaler() const = 0;
-		virtual IScreenSpaceDenoiser* GetDLSSDenoiser() const = 0;
 		virtual TSharedPtr< ISceneViewExtension, ESPMode::ThreadSafe> GetDLSSUpscalerViewExtension() const = 0;
 		virtual bool GetIsRRSupportedByRHI() const = 0;
 };
@@ -71,7 +69,6 @@ public:
 	virtual void GetDLSSRRMinDriverVersion(int32& MajorVersion, int32& MinorVersion) const override;
 	virtual float GetResolutionFractionForQuality(int32 Quality) const override;
 	virtual FDLSSUpscaler* GetDLSSUpscaler() const override;
-	virtual IScreenSpaceDenoiser* GetDLSSDenoiser() const override;
 
 	virtual TSharedPtr< ISceneViewExtension, ESPMode::ThreadSafe> GetDLSSUpscalerViewExtension() const override;
 

@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 54,
-	"VersionName": "8.3.0-NGX310.4.0",
+	"Version": 52,
+	"VersionName": "8.2.0-NGX310.3.0",
 	"FriendlyName": "NVIDIA DLSS Super Resolution/Ray Reconstruction/DLAA",
 	"Description": "DLSS Super Resolution boosts frame rates by rendering fewer pixels and using AI to output high resolution frames. DLSS Ray Reconstruction enhances image quality by generating high-quality pixels between sampled rays for intensive ray traced content. DLAA is an AI-based anti-aliasing mode to improve image quality.",
 	"Category": "Rendering",

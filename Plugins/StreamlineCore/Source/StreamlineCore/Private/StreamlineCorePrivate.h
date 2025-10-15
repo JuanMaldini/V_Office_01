@@ -18,8 +18,6 @@
 #include "StreamlineRHI.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogStreamline, Verbose, All);
-DECLARE_GPU_STAT_NAMED_EXTERN(Streamline, TEXT("Streamline"));
-
 
 bool ShouldTagStreamlineBuffers();
 bool ForceTagStreamlineBuffers();
@@ -44,7 +42,7 @@ END_SHADER_PARAMETER_STRUCT()
 
 inline void AddDebugLayerCompatibilitySetupPasses(FRDGBuilder& GraphBuilder, FDebugLayerCompatibilityShaderParameters* PassParameters)
 {
-	NV_RDG_EVENT_SCOPE(GraphBuilder,Streamline, "UE5.5AndOlderDebugLayerCompatibilitySetup");
+	RDG_EVENT_SCOPE(GraphBuilder, "UE5.5AndOlderDebugLayerCompatibilitySetup");
 	FRDGTextureDesc Desc = FRDGTextureDesc::Create2D(FIntPoint(1, 1), PF_FloatRGBA, FClearValueBinding::Black, TexCreate_RenderTargetable);
 	PassParameters->DebugLayerCompatibilityHelperSource = GraphBuilder.CreateTexture(Desc, TEXT("UE5.5AndOlderDebugLayerCompatibilityHelperSource"));
 	PassParameters->DebugLayerCompatibilityHelperDest = GraphBuilder.CreateTexture(Desc, TEXT("UE5.5AndOlderDebugLayerCompatibilityHelperDest"));

@@ -56,11 +56,6 @@ enum class EStreamlineResource
 	Last = ScalingOutputColor
 };
 
-#if UE_VERSION_AT_LEAST(5,5,0)
-#define NV_RDG_EVENT_SCOPE(GraphBuilder, StatName, Format, ...) RDG_EVENT_SCOPE_STAT(GraphBuilder, StatName,Format, ##__VA_ARGS__);
-#else 
-#define NV_RDG_EVENT_SCOPE(GraphBuilder, StatName, Format, ...) RDG_EVENT_SCOPE(GraphBuilder, Format, ##__VA_ARGS__); 
-#endif
 
 // Commits needed in your engine tree if it's older than 5.6
 // 2be94f9e1642ca026c07cbcc980ac922afc17b00 Add RHIUpdateResourceResidency API to ID3D12DynamicRHI

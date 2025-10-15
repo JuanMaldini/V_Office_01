@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 125,
-	"VersionName": "8.3.0-SL2.9.0",
+	"Version": 123,
+	"VersionName": "8.2.0-SL2.8.0",
 	"FriendlyName": "NVIDIA Streamline Core (hidden, implementation detail)",
 	"Description": "Please use the specific NVIDIA Streamline feature plugins for DLSS-FG etc",
 	"Category": "Rendering",

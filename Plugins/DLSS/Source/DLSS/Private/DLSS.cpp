@@ -540,11 +540,6 @@ FDLSSUpscaler* FDLSSModule::GetDLSSUpscaler() const
 	return DLSSUpscaler.Get();
 }
 
-IScreenSpaceDenoiser* FDLSSModule::GetDLSSDenoiser() const
-{
-	return DLSSDenoiser.Get();
-}
-
 TSharedPtr< ISceneViewExtension, ESPMode::ThreadSafe> FDLSSModule::GetDLSSUpscalerViewExtension() const
 {
 	return StaticCastSharedPtr<ISceneViewExtension>(DLSSUpscalerViewExtension);
