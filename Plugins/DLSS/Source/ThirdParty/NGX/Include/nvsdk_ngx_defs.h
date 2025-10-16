@@ -26,13 +26,13 @@ extern "C"
 #endif
 
 #ifdef __cplusplus
-#if defined(NGX_CORE_BUILD) && defined(_WIN32)
+#if defined(NVSDK_NGX) && defined(_WIN32)
 #define NVSDK_NGX_API extern "C" __declspec(dllexport)
 #else
 #define NVSDK_NGX_API extern "C"
 #endif
 #else
-#if defined(NGX_CORE_BUILD) && defined(_WIN32)
+#if defined(NVSDK_NGX) && defined(_WIN32)
 #define NVSDK_NGX_API __declspec(dllexport)
 #else
 #define NVSDK_NGX_API
@@ -57,11 +57,14 @@ extern "C"
 
 #ifdef __cplusplus
 #if __cplusplus >= 201402L
+#define SR_DEPRECATED_PRESET [[deprecated("Presets A-E are deprecated. Use defaults or preset J or K")]]
 #define SR_DEPRECATED_SHARPENING [[deprecated("Sharpness is not supported")]]
 #else
+#define SR_DEPRECATED_PRESET
 #define SR_DEPRECATED_SHARPENING
 #endif
 #else
+#define SR_DEPRECATED_PRESET
 #define SR_DEPRECATED_SHARPENING
 #endif
 
@@ -69,22 +72,22 @@ typedef unsigned long long AppId;
 
 typedef enum NVSDK_NGX_DLSS_Hint_Render_Preset
 {
-    NVSDK_NGX_DLSS_Hint_Render_Preset_Default = 0,              // default behavior, may or may not change after OTA
-                                                                // NVSDK_NGX_DLSS_Hint_Render_Preset_A removed, use preset J or K
-                                                                // NVSDK_NGX_DLSS_Hint_Render_Preset_B removed, use preset J or K
-                                                                // NVSDK_NGX_DLSS_Hint_Render_Preset_C removed, use preset J or K
-                                                                // NVSDK_NGX_DLSS_Hint_Render_Preset_D removed, use preset J or K
-                                                                // NVSDK_NGX_DLSS_Hint_Render_Preset_E removed, use preset J or K
-    NVSDK_NGX_DLSS_Hint_Render_Preset_F = 6,                    // Intended for Ultra Perf/DLAA modes. The default preset for Ultra Perf
-    NVSDK_NGX_DLSS_Hint_Render_Preset_G = 7,                    // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_H_Reserved = 8,           // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_I_Reserved = 9,           // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_J = 10,                   // Similar to preset K. Preset J might exhibit slightly less ghosting at the cost of extra flickering. Preset K is generally recommended over preset J
-    NVSDK_NGX_DLSS_Hint_Render_Preset_K = 11,                   // Default preset for DLAA/Perf/Balanced/Quality modes that is transformer based. Best image quality preset at a higher performance cost
-    NVSDK_NGX_DLSS_Hint_Render_Preset_L = 12,                   // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_M = 13,                   // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_N = 14,                   // Do not use, reverts to default behavior
-    NVSDK_NGX_DLSS_Hint_Render_Preset_O = 15,                   // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_Default,                  // default behavior, may or may not change after OTA
+    NVSDK_NGX_DLSS_Hint_Render_Preset_A SR_DEPRECATED_PRESET,   // Deprecated, use preset J or K
+    NVSDK_NGX_DLSS_Hint_Render_Preset_B SR_DEPRECATED_PRESET,   // Deprecated, use preset J or K
+    NVSDK_NGX_DLSS_Hint_Render_Preset_C SR_DEPRECATED_PRESET,   // Deprecated, use preset J or K
+    NVSDK_NGX_DLSS_Hint_Render_Preset_D SR_DEPRECATED_PRESET,   // Deprecated, use preset J or K
+    NVSDK_NGX_DLSS_Hint_Render_Preset_E SR_DEPRECATED_PRESET,   // Deprecated, use preset J or K
+    NVSDK_NGX_DLSS_Hint_Render_Preset_F,                        // Intended for Ultra Perf/DLAA modes. The default preset for Ultra Perf
+    NVSDK_NGX_DLSS_Hint_Render_Preset_G,                        // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_H_Reserved,               // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_I_Reserved,               // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_J,                        // Similar to preset K. Preset J might exhibit slightly less ghosting at the cost of extra flickering. Preset K is generally recommended over preset J
+    NVSDK_NGX_DLSS_Hint_Render_Preset_K,                        // Default preset for DLAA/Perf/Balanced/Quality modes that is transformer based. Best image quality preset at a higher performance cost
+    NVSDK_NGX_DLSS_Hint_Render_Preset_L,                        // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_M,                        // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_N,                        // Do not use, reverts to default behavior
+    NVSDK_NGX_DLSS_Hint_Render_Preset_O,                        // Do not use, reverts to default behavior
 } NVSDK_NGX_DLSS_Hint_Render_Preset;
 
 typedef struct NVSDK_NGX_FeatureCommonInfo_Internal NVSDK_NGX_FeatureCommonInfo_Internal;

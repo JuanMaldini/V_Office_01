@@ -91,6 +91,7 @@ struct FDLSSFeatureDesc
 			|| DLSSRRPreset != Other.DLSSRRPreset
 			|| PerfQuality != Other.PerfQuality
 			|| bHighResolutionMotionVectors != Other.bHighResolutionMotionVectors
+			|| bNonZeroSharpness != Other.bNonZeroSharpness
 			|| bUseAutoExposure != Other.bUseAutoExposure
 			|| bEnableAlphaUpscaling != Other.bEnableAlphaUpscaling
 			|| bReleaseMemoryOnDelete != Other.bReleaseMemoryOnDelete
@@ -110,6 +111,7 @@ struct FDLSSFeatureDesc
 	int32 DLSSRRPreset = -1;
 	int32 PerfQuality = -1;
 	bool bHighResolutionMotionVectors = false;
+	bool bNonZeroSharpness = false;
 	bool bUseAutoExposure = false;
 	bool bEnableAlphaUpscaling = false;
 	bool bReleaseMemoryOnDelete = false;
@@ -117,6 +119,7 @@ struct FDLSSFeatureDesc
 	uint32 GPUVisibility = 0;
 	ENGXDLSSDenoiserMode DenoiserMode = ENGXDLSSDenoiserMode::Off;
 
+DLSS_DISABLE_DEPRECATED_WARNINGS
 	FString GetDebugDescription() const
 	{
 		auto NGXDLSSPresetString = [] (int NGXPreset)
@@ -124,6 +127,11 @@ struct FDLSSFeatureDesc
 			switch (NGXPreset)
 			{
 				case NVSDK_NGX_DLSS_Hint_Render_Preset_Default:return TEXT("Default");
+				case NVSDK_NGX_DLSS_Hint_Render_Preset_A:return TEXT("Preset A");
+				case NVSDK_NGX_DLSS_Hint_Render_Preset_B:return TEXT("Preset B");
+				case NVSDK_NGX_DLSS_Hint_Render_Preset_C:return TEXT("Preset C");
+				case NVSDK_NGX_DLSS_Hint_Render_Preset_D:return TEXT("Preset D");
+				case NVSDK_NGX_DLSS_Hint_Render_Preset_E:return TEXT("Preset E");
 				case NVSDK_NGX_DLSS_Hint_Render_Preset_F:return TEXT("Preset F");
 				case NVSDK_NGX_DLSS_Hint_Render_Preset_G:return TEXT("Preset G");
 				case NVSDK_NGX_DLSS_Hint_Render_Preset_H_Reserved:return TEXT("Preset H");
@@ -144,6 +152,9 @@ struct FDLSSFeatureDesc
 				{
 					default: return TEXT("Invalid NVSDK_NGX_RayReconstruction_Hint_Render_Preset");
 					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_Default:return TEXT("Default");
+					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_A:return TEXT("Preset A");
+					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_B:return TEXT("Preset B");
+					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_C:return TEXT("Preset C");
 					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_D:return TEXT("Preset D");
 					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_E:return TEXT("Preset E");
 					case NVSDK_NGX_RayReconstruction_Hint_Render_Preset_F:return TEXT("Preset F");
@@ -182,7 +193,7 @@ struct FDLSSFeatureDesc
 			}
 		};
 
-		return FString::Printf(TEXT("SrcRect=[%dx%d->%dx%d], DestRect=[%dx%d->%dx%d], ScaleX=%f, ScaleY=%f, NGXDLSSPreset=%s(%d), NGXDLSSRRPreset=%s(%d), NGXPerfQuality=%s(%d), bHighResolutionMotionVectors=%d, bUseAutoExposure=%d, bEnableAlphaUpscaling=%d, bReleaseMemoryOnDelete=%d, GPUNode=%u, GPUVisibility=0x%x, DenoiseMode=%s"),
+		return FString::Printf(TEXT("SrcRect=[%dx%d->%dx%d], DestRect=[%dx%d->%dx%d], ScaleX=%f, ScaleY=%f, NGXDLSSPreset=%s(%d), NGXDLSSRRPreset=%s(%d), NGXPerfQuality=%s(%d), bHighResolutionMotionVectors=%d, bNonZeroSharpness=%d, bUseAutoExposure=%d, bEnableAlphaUpscaling=%d, bReleaseMemoryOnDelete=%d, GPUNode=%u, GPUVisibility=0x%x, DenoiseMode=%s"),
 			SrcRect.Min.X, SrcRect.Min.Y, SrcRect.Max.X, SrcRect.Max.Y,
 			DestRect.Min.X, DestRect.Min.Y, DestRect.Max.X, DestRect.Max.Y,
 			float(SrcRect.Width()) / float(DestRect.Width()),
@@ -191,6 +202,7 @@ struct FDLSSFeatureDesc
 			NGXDLSSRRPresetString(DLSSRRPreset), DLSSRRPreset,
 			NGXPerfQualityString(PerfQuality), PerfQuality,
 			bHighResolutionMotionVectors,
+			bNonZeroSharpness,
 			bUseAutoExposure,
 			bEnableAlphaUpscaling,
 			bReleaseMemoryOnDelete,
@@ -199,6 +211,7 @@ struct FDLSSFeatureDesc
 			NGXDenoiserModeString(DenoiserMode));
 
 	}
+DLSS_RESTORE_DEPRECATED_WARNINGS
 };
 
 
@@ -248,6 +261,7 @@ struct NGXRHI_API FRHIDLSSArguments
 #endif
 	bool bHighResolutionMotionVectors = false;
 
+	float Sharpness = 0.0f;
 	bool bReset = false;
 
 	int32 DLSSPreset = NVSDK_NGX_DLSS_Hint_Render_Preset::NVSDK_NGX_DLSS_Hint_Render_Preset_Default;
@@ -275,7 +289,7 @@ struct NGXRHI_API FRHIDLSSArguments
 		return FDLSSFeatureDesc 
 		{ 
 			SrcRect, DestRect, DLSSPreset,DLSSRRPreset, PerfQuality,
-			bHighResolutionMotionVectors, bUseAutoExposure, bEnableAlphaUpscaling,
+			bHighResolutionMotionVectors, Sharpness != 0.0f, bUseAutoExposure, bEnableAlphaUpscaling,
 			bReleaseMemoryOnDelete, GPUNode, GPUVisibility, DenoiserMode
 		};
 	}
@@ -399,6 +413,7 @@ struct FDLSSOptimalSettings
 
 	FIntPoint RenderSizeMin;
 	FIntPoint RenderSizeMax;
+	float Sharpness;
 
 	bool bIsSupported;
 	float OptimalResolutionFraction;

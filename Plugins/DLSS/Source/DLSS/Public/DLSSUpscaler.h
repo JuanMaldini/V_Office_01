@@ -41,7 +41,7 @@ public:
 	void SetupViewFamily(FSceneViewFamily& ViewFamily);
 
 	float GetOptimalResolutionFractionForQuality(EDLSSQualityMode Quality) const;
-
+	float GetOptimalSharpnessForQuality(EDLSSQualityMode Quality) const;
 	float GetMinResolutionFractionForQuality(EDLSSQualityMode Quality) const;
 	float GetMaxResolutionFractionForQuality(EDLSSQualityMode Quality) const;
 	bool IsFixedResolutionFraction(EDLSSQualityMode Quality) const;

@@ -433,6 +433,8 @@ void FNGXD3D12RHI::ExecuteDLSS(FRHICommandList& CmdList, const FRHIDLSSArguments
 		DlssEvalParams.Feature.pInOutput = GetResidentD3D12Resource(D3D12RHI, CmdList, InArguments.OutputColor, false);
 		DlssEvalParams.Feature.pInColor = GetResidentD3D12Resource(D3D12RHI, CmdList, InArguments.InputColor, true);
 
+		DlssEvalParams.Feature.InSharpness = InArguments.Sharpness;
+
 		FlushResourceBarriers(CmdList);
 
 		NVSDK_NGX_Result ResultEvaluate = NGX_D3D12_EVALUATE_DLSS_EXT(

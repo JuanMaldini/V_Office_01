@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 125,
-	"VersionName": "8.3.0-SL2.9.0",
+	"Version": 123,
+	"VersionName": "8.2.0-SL2.8.0",
 	"FriendlyName": "NVIDIA DLSS Frame Generation and DLSS Multi Frame Generation",
 	"Description": "NVIDIA DLSS Frame Generation and DLSS Multi Frame Generation use AI to boost frame rates by generating additional high-quality frames, all while optimizing responsiveness with NVIDIA Reflex.",
 	"Category": "Rendering",

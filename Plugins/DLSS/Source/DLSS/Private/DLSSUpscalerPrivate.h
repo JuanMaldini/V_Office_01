@@ -28,16 +28,6 @@ using ITemporalUpscaler = UE::Renderer::Private::ITemporalUpscaler;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogDLSS, Verbose, All);
 
-#ifndef NV_RDG_EVENT_SCOPE
-#if UE_VERSION_AT_LEAST(5,5,0)
-#define NV_RDG_EVENT_SCOPE(GraphBuilder, StatName, Format, ...) RDG_EVENT_SCOPE_STAT(GraphBuilder, StatName,Format, ##__VA_ARGS__);
-#else 
-#define NV_RDG_EVENT_SCOPE(GraphBuilder, StatName, Format, ...) RDG_EVENT_SCOPE(GraphBuilder, Format, ##__VA_ARGS__); 
-#endif
-#endif
-
-DECLARE_GPU_STAT_NAMED_EXTERN(DLSS, TEXT("DLSS"));
-
 class FDLSSUpscaler;
 struct FTemporalAAHistory;
 
@@ -168,7 +158,7 @@ END_SHADER_PARAMETER_STRUCT()
 
 inline void AddDebugLayerCompatibilitySetupPasses(FRDGBuilder& GraphBuilder, FDebugLayerCompatibilityShaderParameters* PassParameters)
 {
-	NV_RDG_EVENT_SCOPE(GraphBuilder,DLSS, "UE5.5AndOlderDebugLayerCompatibilitySetup");
+	RDG_EVENT_SCOPE(GraphBuilder, "UE5.5AndOlderDebugLayerCompatibilitySetup");
 	FRDGTextureDesc Desc = FRDGTextureDesc::Create2D(FIntPoint(1, 1), PF_FloatRGBA, FClearValueBinding::Black, TexCreate_RenderTargetable);
 	PassParameters->DebugLayerCompatibilityHelperSource = GraphBuilder.CreateTexture(Desc, TEXT("UE5.5AndOlderDebugLayerCompatibilityHelperSource"));
 	PassParameters->DebugLayerCompatibilityHelperDest = GraphBuilder.CreateTexture(Desc, TEXT("UE5.5AndOlderDebugLayerCompatibilityHelperDest"));

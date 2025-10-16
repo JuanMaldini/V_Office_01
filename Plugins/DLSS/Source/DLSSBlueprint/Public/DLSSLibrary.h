@@ -96,7 +96,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Is DLSS-SR Enabled"))
 	static DLSSBLUEPRINT_API bool IsDLSSEnabled();
 
-	/** Enable/disable DLSS Ray Reconstruction */
+	/** (Unsupported in this release) Enable/disable DLSS Ray Reconstruction */
 	UFUNCTION(BlueprintCallable, Category = "DLSS", meta = (DisplayName = "Enable DLSS-RR"))
 	static DLSSBLUEPRINT_API void EnableDLSSRR(bool bEnabled);
 
@@ -125,9 +125,8 @@ public:
 	static DLSSBLUEPRINT_API bool IsRayTracingAvailable();
 
 	/** Provide additional details (such as screen percentage ranges) about a DLSS mode. Screen Resolution is required for Auto mode */
-	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get DLSS-SR Mode Information", HidePin="OptimalSharpness"))
-	static DLSSBLUEPRINT_API void GetDLSSModeInformation(UDLSSMode DLSSMode, FVector2D ScreenResolution, bool& bIsSupported, float& OptimalScreenPercentage, bool& bIsFixedScreenPercentage, float& MinScreenPercentage, float& MaxScreenPercentage, 
-	UPARAM(meta = (DisplayName = "Optimal Sharpness DEPRECATED")) float& OptimalSharpness);
+	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get DLSS-SR Mode Information"))
+	static DLSSBLUEPRINT_API void GetDLSSModeInformation(UDLSSMode DLSSMode, FVector2D ScreenResolution, bool& bIsSupported, float& OptimalScreenPercentage, bool& bIsFixedScreenPercentage, float& MinScreenPercentage, float& MaxScreenPercentage, float& OptimalSharpness);
 
 	/** The global screen percentage range that DLSS supports. Excludes DLSS modes with fixed screen percentage. Also see GetDLSSModeInformation*/
 	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get DLSS-SR Screenpercentage Range"))
@@ -140,6 +139,14 @@ public:
 	/* Read the current DLSS mode */
 	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get DLSS Mode", DeprecatedFunction, DeprecationMessage = "Use 'Is DLSS-SR Enabled' instead"))
 	static DLSSBLUEPRINT_API UDLSSMode GetDLSSMode();
+
+	/* Set the console variables to enable additional DLSS sharpening. Set to 0 to disable (r.NGX.DLSS.Sharpness) */
+	UFUNCTION(BlueprintCallable, Category = "DLSS", meta = (DisplayName = "Set DLSS Sharpness", DeprecatedFunction, DeprecationMessage = "Use NIS sharpening instead"))
+	static DLSSBLUEPRINT_API void SetDLSSSharpness(float Sharpness);
+	
+	/* Read the console variables to infer the current DLSS sharpness (r.NGX.DLSS.Sharpness) */
+	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get DLSS Sharpness", DeprecatedFunction, DeprecationMessage = "Use NIS sharpening instead"))
+	static DLSSBLUEPRINT_API float GetDLSSSharpness();
 
 	/* Find a reasonable default DLSS mode based on current hardware */
 	UFUNCTION(BlueprintPure, Category = "DLSS", meta = (DisplayName = "Get Default DLSS Mode"))
@@ -165,7 +172,6 @@ private:
 	static int32 PreviousShadowDenoiser;
 	static int32 PreviousLumenSSR;
 	static int32 PreviousLumenTemporal;
-	static int32 PreviousLumenBilateralFilter;
 	static bool bDenoisingRequested;
 
 #if !UE_BUILD_SHIPPING

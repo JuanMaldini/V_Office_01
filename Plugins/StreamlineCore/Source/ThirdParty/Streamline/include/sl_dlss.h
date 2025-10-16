@@ -23,8 +23,10 @@
 #pragma once
 
 #if __cplusplus >= 201402L
+#define SR_DEPRECATED_PRESET [[deprecated("Presets A-E are deprecated. Use defaults or preset J or K")]]
 #define SR_DEPRECATED_SHARPENING [[deprecated("Sharpness is not supported")]]
 #else
+#define SR_DEPRECATED_PRESET
 #define SR_DEPRECATED_SHARPENING
 #endif
 
@@ -48,21 +50,21 @@ enum class DLSSPreset : uint32_t
     //! Default behavior, may or may not change after an OTA
     eDefault,
     //! Fixed DL models
-                    // ePresetA removed, use presets J or K
-                    // ePresetB removed, use presets J or K
-                    // ePresetC removed, use presets J or K
-                    // ePresetD removed, use presets J or K
-                    // ePresetE removed, use presets J or K
-    ePresetF = 6,   // Intended for Ultra Perf/DLAA modes. The default preset for Ultra Perf
-    ePresetG = 7,   // Reverts to default, not recommended to use
-    ePresetH = 8,   // Reverts to default, not recommended to use
-    ePresetI = 9,   // Reverts to default, not recommended to use
-    ePresetJ = 10,  // Similar to preset K. Preset J might exhibit slightly less ghosting at the cost of extra flickering. Preset K is generally recommended over preset J
-    ePresetK = 11,  // Default preset for DLAA/Perf/Balanced/Quality modes that is transformer based. Best image quality preset at a higher performance cost
-    ePresetL = 12,  // Reverts to default, not recommended to use
-    ePresetM = 13,  // Reverts to default, not recommended to use
-    ePresetN = 14,  // Reverts to default, not recommended to use
-    ePresetO = 15,  // Reverts to default, not recommended to use
+    ePresetA    SR_DEPRECATED_PRESET,   // Deprecated, use presets J or K
+    ePresetB    SR_DEPRECATED_PRESET,   // Deprecated, use presets J or K
+    ePresetC    SR_DEPRECATED_PRESET,   // Deprecated, use presets J or K
+    ePresetD    SR_DEPRECATED_PRESET,   // Deprecated, use presets J or K
+    ePresetE    SR_DEPRECATED_PRESET,   // Deprecated, use presets J or K
+    ePresetF,   // Intended for Ultra Perf/DLAA modes. The default preset for Ultra Perf
+    ePresetG,   // Reverts to default, not recommended to use
+    ePresetH,   // Reverts to default, not recommended to use
+    ePresetI,   // Reverts to default, not recommended to use
+    ePresetJ,   // Similar to preset K. Preset J might exhibit slightly less ghosting at the cost of extra flickering. Preset K is generally recommended over preset J
+    ePresetK,   // Default preset for DLAA/Perf/Balanced/Quality modes that is transformer based. Best image quality preset at a higher performance cost
+    ePresetL,   // Reverts to default, not recommended to use
+    ePresetM,   // Reverts to default, not recommended to use
+    ePresetN,   // Reverts to default, not recommended to use
+    ePresetO,   // Reverts to default, not recommended to use
 
     eCount
 };

@@ -134,8 +134,9 @@ static constexpr bool bLogStreamlineLogTrackedViews = false;
 #endif
 
 
-DEFINE_GPU_STAT(Streamline);
+DECLARE_GPU_STAT(Streamline);
 DECLARE_GPU_STAT(StreamlineDeepDVC);
+
 
 FDelegateHandle FStreamlineViewExtension::OnPreResizeWindowBackBufferHandle;
 FDelegateHandle FStreamlineViewExtension::OnSlateWindowDestroyedHandle;
@@ -757,12 +758,14 @@ FScreenPassTexture FStreamlineViewExtension::PostProcessPassAtEnd_RenderThread(F
 	const FIntRect ViewRect = ViewInfo.ViewRect;
 	const FIntRect SecondaryViewRect = FIntRect(FIntPoint::ZeroValue, ViewInfo.GetSecondaryViewRectSize());
 
-	NV_RDG_EVENT_SCOPE(GraphBuilder, Streamline, "Streamline ViewID=%u %dx%d [%d,%d -> %d,%d]",
-		ViewID, ViewRect.Width(), ViewRect.Height(),
-		ViewRect.Min.X, ViewRect.Min.Y,
-		ViewRect.Max.X, ViewRect.Max.Y);
 	RDG_GPU_STAT_SCOPE(GraphBuilder, Streamline);
 
+	RDG_EVENT_SCOPE(GraphBuilder, "Streamline ViewID=%u %dx%d [%d,%d -> %d,%d]",
+		// TODO STREAMLINE register the StreamLineRHI work with FGPUProfiler so the streamline tag call shows up with profilegpu
+		ViewID, ViewRect.Width(), ViewRect.Height(),
+		ViewRect.Min.X, ViewRect.Min.Y,
+		ViewRect.Max.X, ViewRect.Max.Y
+	);
 	if (ShouldTagStreamlineBuffers())
 	{
 		const uint64 FrameNumber = GFrameNumberRenderThread;
@@ -844,7 +847,7 @@ FScreenPassTexture FStreamlineViewExtension::PostProcessPassAtEnd_RenderThread(F
 		const bool bTagCustomDepth = CVarStreamlineTagCustomDepth.GetValueOnRenderThread();
 		if (bTagCustomDepth)
 		{
-			NV_RDG_EVENT_SCOPE(GraphBuilder,Streamline, "Streamline CustomDepth %dx%d [%d,%d -> %d,%d]",
+			RDG_EVENT_SCOPE(GraphBuilder, "Streamline CustomDepth %dx%d [%d,%d -> %d,%d]",
 				ViewRect.Width(), ViewRect.Height(),
 				ViewRect.Min.X, ViewRect.Min.Y,
 				ViewRect.Max.X, ViewRect.Max.Y
@@ -1041,12 +1044,14 @@ FScreenPassTexture FStreamlineViewExtension::PostProcessPassAtEnd_RenderThread(F
 	// DeepDVC render pass
 	if(IsDeepDVCActive())
 	{
-		NV_RDG_EVENT_SCOPE(GraphBuilder, StreamlineDeepDVC, "Streamline DeepDVC %dx%d [%d,%d -> %d,%d]",
+		RDG_GPU_STAT_SCOPE(GraphBuilder, StreamlineDeepDVC);
+		RDG_EVENT_SCOPE(GraphBuilder, "Streamline DeepDVC %dx%d [%d,%d -> %d,%d]",
+			// TODO STREAMLINE register the StreamLineRHI work with FGPUProfiler so this get registered as work
 			SceneColor.ViewRect.Width(), SceneColor.ViewRect.Height(),
 			SceneColor.ViewRect.Min.X, SceneColor.ViewRect.Min.Y,
 			SceneColor.ViewRect.Max.X, SceneColor.ViewRect.Max.Y
 		);
-		RDG_GPU_STAT_SCOPE(GraphBuilder, StreamlineDeepDVC);
+
 		// we wont need to run this always since (unlike FG) we skip the whole evaluate pass
 
 		AddStreamlineDeepDVCStateRenderPass(GraphBuilder, ViewID, SecondaryViewRect);

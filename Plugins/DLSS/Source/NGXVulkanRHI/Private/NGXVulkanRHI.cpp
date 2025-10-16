@@ -451,6 +451,7 @@ void FNGXVulkanRHI::ExecuteDLSS(FRHICommandList& CmdList, const FRHIDLSSArgument
 		DlssEvalParams.pInExposureTexture = InArguments.bUseAutoExposure ? nullptr : &InExposureTexture;
 		DlssEvalParams.InPreExposure = InArguments.PreExposure;
 
+		DlssEvalParams.Feature.InSharpness = InArguments.Sharpness;
 		DlssEvalParams.InJitterOffsetX = InArguments.JitterOffset.X;
 		DlssEvalParams.InJitterOffsetY = InArguments.JitterOffset.Y;
 

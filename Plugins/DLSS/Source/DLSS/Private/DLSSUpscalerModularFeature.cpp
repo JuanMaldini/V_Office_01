@@ -175,9 +175,16 @@ bool FDLSSTemporalUpscalerModularFeature::IsFeatureEnabled() const
 {
 	using namespace DLSS::TemporalUpscalerModularFeature;
 
-	// Naming may be confusing. IUpscalerModularFeature says "enabled" when we say "available".
-	// Whoever is using the upscaler modular feature interface will select when DLSS is active, intead of using cvar
-	return GetUpscaler() != nullptr;
+	if (FDLSSUpscaler* DLSSUpscaler = GetUpscaler())
+	{
+		// Runtime checks
+		if (DLSSUpscaler->IsDLSSActive())
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 bool FDLSSTemporalUpscalerModularFeature::AddSceneViewExtensionIsActiveFunctor(const FSceneViewExtensionIsActiveFunctor& IsActiveFunction)
@@ -315,17 +322,7 @@ bool FDLSSTemporalUpscalerModularFeature::PostConfigureViewFamily(
 		return false;
 	}
 
-	int32 MaxPixelCount = 0;
-	for (const FSceneView* View : InOutViewFamily.Views)
-	{
-		// UnscaledViewRect is measured in actual pixels, and does not include the black bars in the case of a contrained aspect ratio view
-		int32 PixelCount = View->UnscaledViewRect.Area();
-		if (PixelCount > MaxPixelCount)
-		{
-			MaxPixelCount = PixelCount;
-		}
-	}
-	const TOptional<EDLSSQualityMode> QualityMode = GetQualityMode(InUpscalerSettings, MaxPixelCount);
+	const TOptional<EDLSSQualityMode> QualityMode = GetQualityMode(InUpscalerSettings);
 	if (!(QualityMode.IsSet() && DLSSUpscaler->IsQualityModeSupported(*QualityMode)))
 	{
 		return false;
@@ -397,7 +394,7 @@ bool FDLSSTemporalUpscalerModularFeature::PostConfigureViewFamily(
 	return true;
 }
 
-TOptional<EDLSSQualityMode> FDLSSTemporalUpscalerModularFeature::GetQualityMode(const FInstancedPropertyBag& InSettings, int32 PixelCount)
+TOptional<EDLSSQualityMode> FDLSSTemporalUpscalerModularFeature::GetQualityMode(const FInstancedPropertyBag& InSettings)
 {
 	using namespace DLSS::TemporalUpscalerModularFeature;
 
@@ -406,17 +403,9 @@ TOptional<EDLSSQualityMode> FDLSSTemporalUpscalerModularFeature::GetQualityMode(
 
 	if (Quality.IsSet())
 	{
-		static_assert(int32(EDLSSUpscalerModularFeatureQuality::Count) == 7, "dear DLSS plugin NVIDIA developer, please update this code to handle the new EDLSSUpscalerModularFeatureQuality enum values");
+		static_assert(int32(EDLSSUpscalerModularFeatureQuality::Count) == 6, "dear DLSS plugin NVIDIA developer, please update this code to handle the new EDLSSUpscalerModularFeatureQuality enum values");
 		switch (*Quality)
 		{
-		case EDLSSUpscalerModularFeatureQuality::Auto:
-		{
-			FDLSSUpscaler* Upscaler = GetUpscaler();
-			if (Upscaler != nullptr)
-			{
-				return Upscaler->GetAutoQualityModeFromPixels(PixelCount);
-			}
-		}
 		case EDLSSUpscalerModularFeatureQuality::UltraQuality:     return EDLSSQualityMode::UltraQuality;
 		case EDLSSUpscalerModularFeatureQuality::Quality:          return EDLSSQualityMode::Quality;
 		case EDLSSUpscalerModularFeatureQuality::Balanced:         return EDLSSQualityMode::Balanced;
